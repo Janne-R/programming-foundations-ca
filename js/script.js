@@ -50,11 +50,11 @@ for (var i = 0; i < games.length; i++) {
 
 // question 4
 function whatIDontLike(value) {
-if (typeof value === "string") {
-  console.log("I don't like " + value);
-} else {
-  console.log("Please send in a string");
-}
+  if (typeof value === "string") {
+    console.log("I don't like " + value);
+  } else {
+    console.log("Please send in a string");
+  }
 }
 
 whatIDontLike("Corona Virus");
@@ -78,7 +78,7 @@ subtraction.innerHTML = result;
 
 // question 6
 var title = document.querySelector("title");
-var button = document.querySelector(".page");
+var buttonPage = document.querySelector(".page");
 var body = document.querySelector("body");
 var h1 = document.querySelector("h1");
 var ul = document.querySelector("ul");
@@ -92,7 +92,45 @@ function updatePage() {
   ul.style.padding = "0";
 }
 
-button.onclick = updatePage;
-
+buttonPage.onclick = updatePage;
 
 // question 7
+var toys = [
+	{
+		name: "Lego",
+		price: 15.6,
+	},
+	{
+		name: "Master of the Universe",
+		price: "28.3",
+	},
+	{
+		name: "Barbie",
+		price: null,
+	},
+	{
+		name: "Mr Potato Head",
+		price: 89.99,
+	},
+];
+
+function addPrices() {
+  var totalPrice = 0;
+
+  for (var i = 0; i < toys.length; i++) {
+    var currentPrice = toys[i].price;
+  
+    if (typeof currentPrice === "string") {
+      var parsedNumber = parseFloat(currentPrice);
+      totalPrice = totalPrice + parsedNumber;
+    } else {
+      totalPrice = totalPrice + currentPrice;
+    }
+  }
+  
+  var total = document.querySelector("#total");
+  total.innerHTML = totalPrice;
+}
+
+var buttonPrice = document.querySelector(".price");
+buttonPrice.onclick = addPrices;
