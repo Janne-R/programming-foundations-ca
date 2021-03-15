@@ -60,5 +60,24 @@ if (typeof value === "string") {
 whatIDontLike("Corona Virus");
 
 // question 5
+function subtract(numberStringOne, numberStringTwo) {
+  var numberOne = parseFloat(numberStringOne);
+  var numberTwo = parseFloat(numberStringTwo);
+
+  if (Number.isNaN(numberOne) || Number.isNaN(numberTwo)) {
+    return "Invalid argument(s)";
+  }
+
+  return numberOne - numberTwo;
+}
+
+var subtraction = document.querySelector("#subtraction");
+var result = subtract("10", "6");
+
+subtraction.innerHTML = result;
+
+
+
+
 // question 6
 // question 7
