@@ -76,8 +76,23 @@ var result = subtract("10", "6");
 
 subtraction.innerHTML = result;
 
-
-
-
 // question 6
+var title = document.querySelector("title");
+var button = document.querySelector(".page");
+var body = document.querySelector("body");
+var h1 = document.querySelector("h1");
+var ul = document.querySelector("ul");
+
+function updatePage() {
+  body.style.backgroundColor = "yellow";
+  title.innerHTML = "updated title";
+  h1.style.color = "green";
+  h1.innerHTML = "<a href='#'>" + h1.innerHTML + "</a>";  
+  ul.style.listStyleType = "none";
+  ul.style.padding = "0";
+}
+
+button.onclick = updatePage;
+
+
 // question 7
