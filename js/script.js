@@ -49,6 +49,16 @@ for (var i = 0; i < games.length; i++) {
 }
 
 // question 4
+function whatIDontLike(value) {
+if (typeof value === "string") {
+  console.log("I don't like " + value);
+} else {
+  console.log("Please send in a string");
+}
+}
+
+whatIDontLike("Corona Virus");
+
 // question 5
 // question 6
 // question 7
