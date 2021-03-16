@@ -87,6 +87,7 @@ function updatePage() {
   body.style.backgroundColor = "yellow";
   title.innerHTML = "updated title";
   h1.style.color = "green";
+  h1.style.fontFamily = "impact";
   h1.innerHTML = "<a href='#'>" + h1.innerHTML + "</a>";  
   ul.style.listStyleType = "none";
   ul.style.padding = "0";
